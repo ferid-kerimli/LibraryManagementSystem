@@ -117,12 +117,6 @@ public class GeneralDatabasePanel extends JPanel {
             String review2 = o2.toString();
             return review1.compareToIgnoreCase(review2);
         });
-
-        sorter.setComparator(3, (Object o1, Object o2) -> {
-            Integer rating1 = Integer.parseInt(o1.toString());
-            Integer rating2 = Integer.parseInt(o2.toString());
-            return rating1.compareTo(rating2);
-        });
     }
 
     public void loadCSVData(ResourceBundle messages) {
@@ -276,7 +270,7 @@ public class GeneralDatabasePanel extends JPanel {
     public void deleteSelectedRow(ResourceBundle messages) {
         int selectedRow = dataTable.getSelectedRow();
         if (selectedRow == -1) {
-            JOptionPane.showMessageDialog(this, "Select a row to delete.", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, messages.getString("textForUserDeleteError"), messages.getString("errorText"), JOptionPane.ERROR_MESSAGE);
             return;
         }
 

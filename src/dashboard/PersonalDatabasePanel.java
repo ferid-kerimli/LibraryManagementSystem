@@ -29,7 +29,7 @@ public class PersonalDatabasePanel extends JPanel {
         JButton startButton = new JButton(messages.getString("textForPersonalDatabaseStartButton"));
         JButton endButton = new JButton(messages.getString("textForPersonalDatabaseEndButton"));
         JButton deleteButton = new JButton(messages.getString("textForPersonalDatabaseDeleteButton"));
-        JButton refreshButton = new JButton("Refresh");
+        JButton refreshButton = new JButton(messages.getString("textForPersonalDatabaseRefreshButton"));
         JTextField searchField = new JTextField(20);
         JButton searchButton = new JButton(messages.getString("textForPersonalDatabaseSearchButton"));
 
